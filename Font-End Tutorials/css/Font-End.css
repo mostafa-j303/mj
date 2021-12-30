@@ -1,0 +1,859 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  margin: 0;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:first-child {
+  background-color: #aaa;
+}
+section:nth-child(2) {
+  background-color: #bbb;
+}
+section:nth-child(3) {
+  background-color: #ccc;
+}
+section:last-of-type {
+  background-color: #333;
+}
+section.four {
+  background-color: rgb(128, 115, 128);
+}
+section.five {
+  background-color: rgb(243, 181, 243);
+}
+section.seven {
+  background-color: violet;
+}
+section.eight {
+  background-color: indianred;
+}
+section.nine {
+  background-color: #333;
+}
+section.sexteen {
+  background-color: rgb(28, 126, 230);
+  flex-direction: column;
+}
+section.seventeen {
+  background-color: #91d1cb;
+}
+section.eighteen {
+  background-color: rgb(7, 22, 29);
+}
+section.nineteen {
+  background-color: #6260b5;
+}
+section.twenty {
+  background-color: rgb(240, 187, 126);
+}
+section.twentyOne {
+  background-color: #06260f;
+}
+
+/* start section one */
+
+.seconds,
+.hours,
+.minutes,
+.days {
+  margin: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* end section one */
+/* start section two */
+
+.numsTwo {
+  width: 400px;
+  display: flex;
+}
+.numsTwo .numTwo {
+  flex: 1;
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
+
+/* end section two */
+/* start section three */
+
+.progressOne {
+  position: relative;
+  width: 500px;
+  height: 30px;
+  background-color: white;
+  margin: 10px;
+}
+.progressOne span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: indianred;
+  transition: width 0.3s linear;
+}
+
+/* end section three */
+/* start section four (clip-path) */
+
+/*Css clip-path maker.com(website for clip-path)*/
+.c1 {
+  position: absolute;
+  left: 30%;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  clip-path: circle(70px at 50% 50%);
+}
+.tmain {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+.t1 {
+  background-color: violet;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  /*angle 1, angle 2 , angle 3 , ....  ta7akom bell zaweya*/
+}
+.t2 {
+  background-color: rebeccapurple;
+  clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+}
+.t3 {
+  background-color: olivedrab;
+  clip-path: polygon(100% 0%, 50% 50%, 0% 0%);
+}
+.t4 {
+  background-color: indianred;
+  clip-path: polygon(50% 100%, 0% 50%, 100% 50%);
+}
+
+/* end section four (clip-path)*/
+/* start section five */
+
+.sectionFive {
+  width: 300px;
+  margin: 20px auto;
+}
+input.five {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #d7d7d7;
+  background-color: #fbfbfb;
+}
+input.five:focus {
+  outline: none;
+}
+.progressFive {
+  background-color: #2196f3;
+  height: 2px;
+  width: 0;
+  display: block;
+  position: relative;
+  top: -2px;
+  transition: 0.5s;
+}
+.countFive {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  padding: 5px;
+}
+.zero {
+  font-weight: bold;
+  color: red;
+}
+.zeroPro {
+  background-color: red;
+  transition: 0.5s;
+}
+
+/* end section five */
+/* start (7al2a 6 scrollbar) */
+
+/* fik t7ot scrollbar bi div aw input aw ... */
+::-webkit-scrollbar {
+  width: 30px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fbfbfb;
+  box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(205 92 92 / 50%);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: indianred;
+}
+::-webkit-scrollbar-corner {
+  background-color: indigo;
+}
+
+/* end (7al2a 6 scrollbar) */
+/* start section seven (7al2a 7) */
+
+.toggleSeven {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-color: #eee;
+  cursor: pointer;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px;
+}
+.toggleSeven span {
+  width: 100%;
+  background-color: #777;
+  height: 4px;
+  transition: 0.5s;
+}
+.toggleSeven:hover span {
+  background-color: #333;
+}
+nav {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+  transform: translateY(-100%);
+}
+nav.openSeven {
+  transform: translateY(0);
+}
+nav .closeSeven {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+nav .closeSeven:hover {
+  color: indianred;
+  border-color: indianred;
+}
+nav a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 80px;
+  transition: 0.5s;
+}
+nav a:hover {
+  background-color: rgb(0 0 0 / 50%);
+  color: indianred;
+}
+
+/* end section seven (7al2a 7) */
+/* start section eight (7al2a 8 Typewriter Effect With Css)*/
+
+.pEight {
+  color: rgb(255 255 255 / 80%);
+  font-size: 30px;
+  width: 355px;
+  margin: 30px auto;
+  border-right: 2px solid rgb(255 255 255 / 80%);
+  overflow: hidden;
+  white-space: nowrap; /* kermel eza l width z8ir ma yenzal l kalem la ta7et*/
+  animation: control-width 3s steps(22) 2s both, blink 0.5s infinite; /* l steps() ya3ne 5lel kam 5otwe beo5las l animation*/
+}
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 355px;
+  }
+}
+@keyframes blink {
+  from {
+    border-right-color: rgb(255 255 255 / 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* end section eight (7al2a 8 Typewriter Effect With Css)*/
+/* start section nine (7al2a 9) */
+
+.containerNine {
+  width: 500px;
+  margin: 20px auto;
+}
+.formNine {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.inputNine {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+  width: fit-content;
+}
+.inputNine:focus {
+  outline: none;
+}
+.addNine {
+  border: none;
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.tasksNine {
+  background-color: #eee;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+}
+.tasksNine .task {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.tasksNine .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasksNine .task:hover {
+  background-color: #f7f7f7;
+}
+.tasksNine .task.done {
+  opacity: 0.5;
+}
+.tasksNine .task span {
+  font-weight: bold;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* end section nine (7al2a 9) */
+/* start section eleven (7al2a 11) */
+
+section.eleven {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dEleven {
+  margin: 60px auto;
+}
+.switcherEleven {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.switcherEleven li {
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #eee;
+  min-width: 105px;
+  text-align: center;
+  transition: 0.2s;
+}
+.switcherEleven li.activeEleven,
+.switcherEleven li:hover {
+  background-color: red;
+  color: white;
+}
+.galleryEleven {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 30px auto;
+}
+.galleryEleven img {
+  margin-bottom: 10px;
+  transition: 0.3s;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* end section eleven (7al2a 11) */
+/* start section twelve (7al2a 12) */
+
+section.twelve {
+  background-color: rgb(94 144 128);
+  flex-direction: column;
+}
+.serial {
+  width: 200px;
+  padding: 20px;
+  background-color: #eee;
+  margin: 40px auto 0;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  height: 66.5px;
+}
+.generate {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+.generate:hover {
+  background-color: #f0440e;
+}
+
+/* end section twelve (7al2a 12) */
+/* start section fourteen (7al2a 14) */
+
+section.fourteen {
+  background-color: #eb8262;
+  flex-direction: column;
+  gap: 10px;
+}
+.tabsFourteen {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-radius: 18px;
+  margin: 0;
+  background-color: darkgrey;
+  border: solid;
+}
+.tabsFourteen li {
+  padding: 15px;
+  background-color: #f6f4f4;
+  border-right: 1px solid white;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 18px;
+}
+.tabsFourteen li.active,
+.tabsFourteen li:hover {
+  background-color: #ddd;
+}
+.contentFourteen {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.contentFourteen > div {
+  padding: 20px;
+}
+.contentFourteen > div:not(:first-child) {
+  display: none;
+}
+
+/* end section fourteen (7al2a 14) */
+/* start (7al2a 15) */
+
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: -30px;
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 4px;
+  font-family: Arial, Tahoma;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.up.show {
+  right: 10px;
+}
+
+/* end (7al2a 15) */
+/* start section sexteen (7al2a 16 (Customize Radio Input)) */
+
+form.formSexteen {
+  width: 400px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+}
+form.formSexteen > div {
+  padding: 10px;
+  border-bottom: solid 1px #6384dc;
+}
+form.formSexteen input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+form.formSexteen label {
+  position: relative;
+  padding-left: 25px;
+}
+form.formSexteen label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0075ff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+}
+form.formSexteen input[type="radio"]:checked + label::after,
+form.formSexteen input[type="radio"]:not(:checked):hover + label::after {
+  content: "";
+  background-color: #0075ff;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+}
+form.formSexteen input[type="radio"]:not(:checked):hover + label::after {
+  opacity: 0.2;
+}
+form.formSexteen input[type="radio"]:checked + label {
+  color: #0075ff;
+}
+
+/* end section sexteen (7al2a 16 (Customize Radio Input)) */
+/* start section seventeen (7al2a 17 (Fill Element Background From Other Element)) */
+
+.productSeventeen {
+  width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+.productSeventeen .numberSeventeen {
+  background-color: #009688;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  transition: 0.6s;
+}
+.productSeventeen h3 {
+  margin: 15px 0;
+  font-size: 26px;
+  transition: 0.6s;
+}
+.productSeventeen p {
+  line-height: 1.6;
+  transition: 0.6s;
+  font-size: 18px;
+}
+.productSeventeen:hover .numberSeventeen {
+  box-shadow: 0 0 0 500px #009688;
+}
+.productSeventeen:hover h3,
+.productSeventeen:hover p {
+  color: white;
+}
+
+/* end section seventeen (7al2a 17 (Fill Element Background From Other Element)) */
+/* start section eightteen (7al2a 18 (Create Ribbon Without Images)) */
+
+.productEighteen {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+  border-radius: 7px;
+}
+.productEighteen h2.titleEighteen {
+  margin: 0 0 20px;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px;
+  width: calc(100% + 80px);
+  position: relative;
+  left: -40px;
+}
+.productEighteen .titleEighteen:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  border-width: 10px;
+  border-color: #02766b #02766b transparent transparent;
+  border-style: solid;
+}
+.productEighteen .titleEighteen:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  border-width: 10px;
+  border-color: #02766b transparent transparent #02766b;
+  border-style: solid;
+}
+.productEighteen p {
+  line-height: 1.6;
+}
+
+/* end section eighteen (7al2a 18 (Create Ribbon Without Images)) */
+/* start section nineteen (7al2a 19 (Create Tooltip In All Positions)) */
+
+.btnNineteen {
+  background-color: #eee;
+  margin: 100px auto;
+  padding: 10px 20px;
+  display: block;
+  font-size: 40px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.btnNineteen:focus {
+  outline: none;
+}
+.btnNineteen span {
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  min-width: 240px;
+  padding: 13px 15px;
+  border-radius: 6px;
+  top: -60px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.btnNineteen span:before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 10px;
+  border-color: #333 transparent transparent;
+}
+.btnNineteen:hover {
+  overflow: visible;
+}
+.btnNineteen:hover span {
+  opacity: 1;
+}
+[data-position="bottom"] span {
+  top: auto;
+  bottom: -60px;
+}
+[data-position="bottom"] span:before {
+  bottom: auto;
+  top: -20px;
+  border-color: transparent transparent #333;
+}
+
+/* end section nineteen (7al2a 19 (Create Tooltip In All Positions)) */
+/* start section twenty (7al2a 20 (Text Fill Effect On Hover)) */
+
+.divTwenty {
+  background-color: #f6efaf;
+  padding: 0 25px;
+  border-radius: 7px;
+}
+.fillTwenty {
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  width: fit-content;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(168 144 144);
+
+  position: relative;
+}
+.fillTwenty:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-fill-color: #ac5134;
+  transition: 0.5s;
+  width: 0;
+  overflow: hidden;
+}
+.fillTwenty:hover:before {
+  width: 100%;
+}
+
+/* end section twenty (7al2a 20 (Text Fill Effect On Hover)) */
+/* start section twentyOne (7al2a 21 (Moving To Right Text Effect On Hover)) */
+
+.linkTwentyOne {
+  color: #8bc34a;
+  text-decoration: none;
+  display: block;
+  border: 2px solid #8bc34a;
+  margin: 20px auto;
+  position: relative;
+  width: 160px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.linkTwentyOne:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  color: #48bf67;
+}
+.linkTwentyOne span {
+  display: block;
+  transition: 0.3s;
+}
+.linkTwentyOne:hover {
+  border-radius: 7px;
+  border-color: #48bf67;
+  background-color: #000;
+}
+.linkTwentyOne:hover:before {
+  transform: translateX(0);
+}
+.linkTwentyOne:hover span {
+  transform: translateX(100%);
+}
+
+/* end section twentyOne (7al2a 21 (Moving To Right Text Effect On Hover)) */
+/* start section twentyTwo (7al2a 22 (Centering Elements Horizontally And Vertically)) */
+
+/* For Demo Only */
+.boxTwentyTwo {
+  background-color: #eee;
+  margin: 40px auto;
+  width: 800px;
+  height: 300px;
+  position: relative;
+}
+.boxTwentyTwo:before {
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  margin-left: -2px;
+}
+.boxTwentyTwo:after {
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  margin-top: -2px;
+}
+.boxTwentyTwo:before,
+.boxTwentyTwo:after {
+  content: "";
+  background-color: #ddd;
+  position: absolute;
+}
+.boxTwentyTwo .itemTwentyTwo {
+  background-color: #f00;
+  width: 200px;
+  height: 100px;
+  z-index: 2;
+  border-radius: 7px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* For Demo Only */
+
+/* Margin + Position */
+/* .boxTwentyTwo .itemTwentyTwo {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  top: 50%;
+  z-index: 2;
+} */
+
+/* Margin + Transform */
+/* .boxTwentyTwo .itemTwentyTwo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+} */
+
+/* Flex */
+.boxTwentyTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* start section twentyTwo (7al2a 22 (Centering Elements Horizontally And Vertically)) */
