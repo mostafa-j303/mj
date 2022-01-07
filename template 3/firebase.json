@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "t3",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/template3.html"
+      }
+    ]
+  }
+}
